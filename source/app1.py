@@ -62,7 +62,6 @@ def protected():
 @login_required
 def listar_usuarios():
     try:
-        #variable de cursor para la bd
         cursor=db.connection.cursor()
         sql="SELECT * FROM usuario ORDER BY id"
         cursor.execute(sql)
