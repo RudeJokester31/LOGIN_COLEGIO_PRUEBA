@@ -8,7 +8,9 @@
 
 {% block body %}
 <form class="form-signin" action="/login" method="POST">
-    <img class="mb-3" src="{{ url_for('static', filename='img/logo.png') }}" alt="" width="300" height="180">
+    <div>
+        <img class="mb-3" src="{{ url_for('static', filename='img/logo1.gif') }}" alt="320" width="320" height="320">
+    </div>
     {% with messages = get_flashed_messages() %}
 
     {% if messages %}
@@ -23,7 +25,7 @@
     {% endif %}
 
     {% endwith %}
-    <h1 class="h2 mb-3 fw-bald">Inicie Sesión</h1>
+    <h1 class="h2 mb-3 fw-bald" style="color: black;">Sign in</h1>
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
     <div class="form-floating">
         <input type="text" class="form-control" id="username" name="username" placeholder="username">
@@ -35,11 +37,11 @@
     </div>
     <div class="checkbox mb-2">
         <label>
-            <input type="checkbox" value="Recordarme"> Recordarme
+            <input type="checkbox" value="Recordarme"> Remenber me
         </label>
     </div>
-    <button class="w-100 btn btn-lg btn-primary mb-3 fw-arial" type="submit">Entrar</button>
-    <button class="btn-secondary btn w-100" type="submit">Recuperar Contraseña</button>
-    <p class="mt-5 mb-3 text-muted">& Copyright(PIN II); 2023</p>
+    <button class="w-100 btn btn-lg btn-warning mb-3 fw-arial" type="submit" style="color: #000000;">Sign in</button>
+    <button class="btn btn-link" type="submit" style="color: #ffc107;">Recuperar Contraseña</button>
+    <p class="mt-5 mb-3 text-muted">@Copyright 2023</p>
 </form>
 {% endblock %}
