@@ -16,7 +16,7 @@
     {% if messages %}
     <br />
     {% for message in messages %}
-    <div class="alert alert-primary alert-dismissible" role="alert">
+    <div class="alert alert-warning d-flex align-items-center alert-dismissible" role="alert">
         <strong>{{ message }}</strong>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
     </div>
@@ -25,23 +25,24 @@
     {% endif %}
 
     {% endwith %}
-    <h1 class="h2 mb-3 fw-bald" style="color: black;">Sign in</h1>
+    <h1 class="h2 mb-3 fw-bald" style="color: black;">Inicia Sesión</h1>
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
     <div class="form-floating">
         <input type="text" class="form-control" id="username" name="username" placeholder="username">
-        <label for="username">username</label>
+        <label for="username">Usuario</label>
     </div>
     <div class="form-floating mt-2">
         <input type="password" class="form-control" name="password" placeholder="password">
-        <label for="password">password</label>
+        <label for="password">Contraseña</label>
     </div>
     <div class="checkbox mb-2">
         <label>
-            <input type="checkbox" value="Recordarme"> Remenber me
+            <input type="checkbox" value="Recordarme"> Recuerdame
         </label>
     </div>
-    <button class="w-100 btn btn-lg btn-warning mb-3 fw-arial" type="submit" style="color: #000000;">Sign in</button>
+    <button class="w-100 btn btn-lg btn-warning mb-2 fw-bald" type="submit" style="color: #000000;">Entrar</button>
     <button class="btn btn-link" type="submit" style="color: #ffc107;">Recuperar Contraseña</button>
     <p class="mt-5 mb-3 text-muted">@Copyright 2023</p>
+
 </form>
 {% endblock %}
